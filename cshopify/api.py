@@ -8,14 +8,10 @@ class API:
         self.access_token = access_token
         self.version = api_version
 
-    def validateJSON(jsonData):
-        try:
-            json.loads(jsonData)
-        except ValueError:
-            return False
-        return True
+    def validateJSON(self, data):
+        return isinstance(data, dict)
 
-    def __request(self, method, endpoint, params, data=None, **kwargs):
+    def __request(self, method, endpoint, data=None, params=None, **kwargs):
         url = f"https://{self.store_name}.myshopify.com/admin/api/{self.version}/{endpoint}.json"
 
         headers = {"X-Shopify-Access-Token": self.access_token}
@@ -23,10 +19,10 @@ class API:
         if data is not None:
             headers["Content-Type"] = "application/json"
 
-        print(url)
+        print(headers)
 
         return request(
-            method=method, url=url, params=params, data=data, headers=headers, **kwargs
+            method=method, url=url, params=params, json=data, headers=headers, **kwargs
         )
 
     def get(self, endpoint, params=None):

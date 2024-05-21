@@ -17,6 +17,11 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+cshopify/__pycache__/
 
 # Environments
 venv/
+
+# test file
+test.py
+
