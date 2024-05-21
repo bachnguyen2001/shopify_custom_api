@@ -8,7 +8,7 @@ setup(
     version="0.0.1",
     description="An simple library that help call shopify's API" ,
     long_description=readme,
-    url="http://contoso.com",
+    url="https://github.com/bachnguyen2001/shopify_custom_api.git",
     author="Nguyen Ngoc Bach",
     author_email="bachnguyenfptu@gmail.com",
     license="MIT",
