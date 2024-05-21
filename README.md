@@ -21,5 +21,5 @@ A custom Shopify API library that make shopify api call more easy.
 To install the package, you can use `pip`:
 
 ```sh
-pip install shopify_custom_api
+pip install -U customShopifyAPI
 
