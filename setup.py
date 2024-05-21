@@ -9,8 +9,8 @@ packages = find_packages()
 print("Packages found:", packages)
 
 setup(
-    name="              ",
-    version="0.0.1",
+    name="shopify_custom_api",
+    version="0.0.4",
     description="A simple library that helps call Shopify's API",
     long_description=long_description,
     long_description_content_type="text/markdown",
