@@ -12,9 +12,7 @@ A custom Shopify API library that make shopify api call more easy.
 
 - Easy authentication with Shopify.
 - Simplified methods for common API operations.
-- Enhanced error handling.
 - Support for additional Shopify API endpoints not covered by the official library.
-- Customizable request and response processing.
 
 ## Installation
 
