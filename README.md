@@ -10,10 +10,11 @@ A custom Shopify API library that make shopify api call more easy.
   - [Installation](#installation)
   - [Getting started](#getting-started)
     - [setup](#setup)
-    - [get](#get)
-    - [post](#post)
-    - [put](#put)
-    - [delete](#delete)
+    - [option](#option)
+      - [get](#get)
+      - [post](#post)
+      - [put](#put)
+      - [delete](#delete)
 ## Features
 
 - Easy authentication with Shopify.
@@ -38,21 +39,28 @@ pip install -U shopify_custom_api
 ```py
 from cshopify import API
 
-shop = API('xxxxx', 'shpat_xxxxxxxxxxxxxxxxxxxxxxx', '2024-01')
+shop = API(store_name='STORE_NAME', access_token='shpat_xxxxxxxxxxxxxxxxxxxxxxx', api_version='2024-01')
 ```
-### get
+
+### option 
+|parameter|description|
+|----|------------------|
+|data| JSON format data |
+|endpoint| Resource type that need to be processed |
+|params| Additional parameters for query |
+#### get
 ```py
 .get(endpoint, params)
 ```
-### post
+#### post
 ```py
 .post(endpoint, data)
 ```
-### put
+#### put
 ```py
 .put(endpoint, data)
 ```
-### delete
+#### delete
 ```py
 .delete(endpoint)
 ```
