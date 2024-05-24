@@ -19,7 +19,6 @@ class API:
         if data is not None:
             headers["Content-Type"] = "application/json"
 
-        print(headers)
 
         return request(
             method=method, url=url, params=params, json=data, headers=headers, **kwargs
@@ -32,13 +31,13 @@ class API:
     def post(self, endpoint, data, params=None):
         # Post request
         assert self.validateJSON(data), "input data type must be JSON"
-        return self.__request("POST", endpoint, data, params=params)
+        return self.__request("POST", endpoint, data)
 
     def put(self, endpoint, data, params=None):
         # Put request
         assert self.validateJSON(data), "input data type must be JSON"
-        return self.__request("PUT", endpoint, data, params=params)
+        return self.__request("PUT", endpoint, data)
 
     def delete(self, endpoint, params=None):
         # Delete request
-        return self.__request("DELETE", endpoint, params=params)
+        return self.__request("DELETE", endpoint)
