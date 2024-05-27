@@ -10,7 +10,7 @@ print("Packages found:", packages)
 
 setup(
     name="shopify_custom_api",
-    version="0.1.1",
+    version="0.1.2",
     description="A simple library that helps call Shopify's API",
     long_description=long_description,
     long_description_content_type="text/markdown",

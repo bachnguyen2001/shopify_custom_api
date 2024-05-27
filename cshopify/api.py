@@ -8,6 +8,7 @@ class API:
         self.access_token = access_token
         self.version = api_version
 
+    # Check if input data is in right format
     def validateJSON(self, data):
         return isinstance(data, dict)
 
