@@ -39,7 +39,7 @@ pip install -U shopify_custom_api
 ```py
 from cshopify import API
 
-shop = API(store_name='STORE_NAME', access_token='shpat_xxxxxxxxxxxxxxxxxxxxxxx', api_version='2024-01')
+shop = API(store_url='STORE_NAME', access_token='shpat_xxxxxxxxxxxxxxxxxxxxxxx', api_version='2024-01')
 ```
 
 ### option 

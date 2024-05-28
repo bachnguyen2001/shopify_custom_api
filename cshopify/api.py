@@ -3,8 +3,8 @@ import json
 
 
 class API:
-    def __init__(self, store_name, access_token, api_version):
-        self.store_name = store_name
+    def __init__(self, store_url, access_token, api_version):
+        self.store_url = store_url
         self.access_token = access_token
         self.version = api_version
 
@@ -13,7 +13,7 @@ class API:
         return isinstance(data, dict)
 
     def __request(self, method, endpoint, data=None, params=None, **kwargs):
-        url = f"https://{self.store_name}.myshopify.com/admin/api/{self.version}/{endpoint}.json"
+        url = f"https://{self.store_url}/admin/api/{self.version}/{endpoint}.json"
 
         headers = {"X-Shopify-Access-Token": self.access_token}
 
